@@ -11,5 +11,5 @@ def post_message(token, channel, text):
 
 myToken = "xoxb-123*****"
 
-post_message(
-    "xoxb-1852632646227-1852439465682-N1QzuCF493ebuxYVbbf7gKju", "#-c-java", "준일입니다.")
+post_message('xoxb-1852632646227-1902785869699-V0rh72GiMUKnsdXam8NhQ8go',
+             "#-c-java", "junil hi")

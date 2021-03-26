@@ -12,5 +12,5 @@ time.sleep(5)
 
 app = application.Application()
 # junil 계정정보(id, pw, 공인인증서pw)
-app.start('C:\CREON\STARTER\coStarter.exe /prj:cp /id:userid /pwd:pa$$word /pwdcert:certPa$$word /autostart')
+app.start('C:\CREON\STARTER\coStarter.exe /prj:cp /id:joon2344 /pwd:altkzk2! /pwdcert:altkzk2gh! /autostart')
 time.sleep(60)

@@ -11,15 +11,25 @@ from bs4 import BeautifulSoup
 from urllib.request import urlopen
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
+import requests
 
-slack = Slacker('xoxb-1852632646227-1852439465682-N1QzuCF493ebuxYVbbf7gKju')
+
+def post_message(token, channel, text):
+    response = requests.post("https://slack.com/api/chat.postMessage",
+                             headers={"Authorization": "Bearer "+token},
+                             data={"channel": channel, "text": text}
+                             )
+
+
+myToken = "xoxb-123*****"
 
 
 def dbgout(message):
     """인자로 받은 문자열을 파이썬 셸과 슬랙으로 동시에 출력한다."""
     print(datetime.now().strftime('[%m/%d %H:%M:%S]'), message)
     strbuf = datetime.now().strftime('[%m/%d %H:%M:%S] ') + message
-    slack.chat.post_message('#-c-java', strbuf)
+    post_message(
+        'xoxb-1852632646227-1902785869699-V0rh72GiMUKnsdXam8NhQ8go', "#-c-java", "junil")
 
 
 def printlog(message, *args):
@@ -149,7 +159,7 @@ def get_target_price(code):  # junil 목표가
         lastday_high = lastday[1]
         lastday_low = lastday[2]
         target_price = today_open + \
-            (lastday_high - lastday_low) * 0.5  # junil 목표가 
+            (lastday_high - lastday_low) * 0.5  # junil 목표가
         return target_price
     except Exception as ex:
         dbgout("`get_target_price() -> exception! " + str(ex) + "`")
@@ -265,7 +275,7 @@ def sell_all():
 
 if __name__ == '__main__':
     try:
-        symbol_list = ['A252670', 'A252670', 'A233740', 'A250780']
+        symbol_list = ['A252670', 'A069500', 'A122630', 'A114800']
         # junil 종목 번호 입력
         bought_list = []     # 매수 완료된 종목 리스트
         target_buy_count = 4  # junil 최대매수수, 종목 번호와 수 맞추기
