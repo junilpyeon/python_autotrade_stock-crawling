@@ -273,13 +273,13 @@ def sell_all():
         dbgout("sell_all() -> exception! " + str(ex))
 
 
-if __name__ == '__main__':
+if __name__ == '__main__': 
     try:
-        symbol_list = ['A122630', 'A225130', 'A229200', 'A250780', 'A251340']
-        # junil 종목 번호 입력
+        symbol_list = ['A122630', 'A225130', 'A229200', 'A250780', 'A251340', '252670', '114800', '252710']
+        # junil 종목 번호 입력 (8:tiger200선물인버스2X)
         bought_list = []     # 매수 완료된 종목 리스트
-        target_buy_count = 4  # junil 최대매수수, 종목 번호와 수 맞추기
-        buy_percent = 0.20  # junil 구매 퍼센트
+        target_buy_count = 8  # junil 최대매수수, 종목 번호와 수 맞추기
+        buy_percent = 0.125  # junil 구매 퍼센트
         printlog('check_creon_system() :',
                  check_creon_system())  # junil 크레온 접속 점검
         stocks = get_stock_balance('ALL')      # junil 보유한 모든 종목 조회
