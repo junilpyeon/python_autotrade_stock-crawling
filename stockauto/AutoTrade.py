@@ -276,7 +276,7 @@ def sell_all():
 if __name__ == '__main__': 
     try:
         symbol_list = ['A122630', 'A225130', 'A229200', 'A250780', 'A251340', '252670', '114800', '252710']
-        # junil 종목 번호 입력 (8:tiger200선물인버스2X)
+        # junil 종목 번호 입력 (1:KODEX레버리지:27455, 2:KINDEX골드레버리지:16345, 3:KODEX코스닥150:14570, 4:TIGER코스닥150인버스:4620, 5:KODEX코스닥150인버스:4515, 6:KODEX200인버스2X:2020. 7:KODEX200인버스2X, 8:tiger200선물인버스2X)
         bought_list = []     # 매수 완료된 종목 리스트
         target_buy_count = 8  # junil 최대매수수, 종목 번호와 수 맞추기
         buy_percent = 0.125  # junil 구매 퍼센트
