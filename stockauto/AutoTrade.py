@@ -273,13 +273,14 @@ def sell_all():
         dbgout("sell_all() -> exception! " + str(ex))
 
 
-if __name__ == '__main__': 
+if __name__ == '__main__':
     try:
-        symbol_list = ['A122630', 'A225130', 'A229200', 'A250780', 'A251340', '252670', '114800', '252710']
-        # junil 종목 번호 입력 (1:KODEX레버리지:27455, 2:KINDEX골드레버리지:16345, 3:KODEX코스닥150:14570, 4:TIGER코스닥150인버스:4620, 5:KODEX코스닥150인버스:4515, 6:KODEX200인버스2X:2020. 7:KODEX200인버스2X, 8:tiger200선물인버스2X)
+        symbol_list = ['114800',
+                       '229200', '278240', '233740']
+        # junil 종목 번호 입력 (229200:KODEX코스닥150,278240:KBSTAR 코스닥150선물레버리지,A225130:KODEX레버리지:27455, A229200:KINDEX골드레버리지:16345, A250780:KODEX코스닥150:14570, A251340:TIGER코스닥150인버스:4620, A251340:KODEX코스닥150인버스:4515, 252670:KODEX200인버스2X:2020. 114800:KODEX200인버스2X, 252710:tiger200선물인버스2X, 233740:KODEX코스닥150레버리지:15345)
         bought_list = []     # 매수 완료된 종목 리스트
-        target_buy_count = 8  # junil 최대매수수, 종목 번호와 수 맞추기
-        buy_percent = 0.125  # junil 구매 퍼센트
+        target_buy_count = 4  # junil 최대매수수, 종목 번호와 수 맞추기
+        buy_percent = 0.25  # junil 구매 퍼센트
         printlog('check_creon_system() :',
                  check_creon_system())  # junil 크레온 접속 점검
         stocks = get_stock_balance('ALL')      # junil 보유한 모든 종목 조회
