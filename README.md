@@ -7,7 +7,7 @@ slack 알람, 증권 주식정보 크롤링, 자동 매수매도
 Python, beautifulsoup, slack
 
 # 소스 로컬 세팅 및 실행법 (source setting rule)
-1.
+1. python AutoTrade.py
 
 -작업스케줄러 등록
 https://www.youtube.com/watch?v=5bTxyBeOVkA&list=PLU9-uwewPMe0fB60VIMuKFV7gPDXmyOzp&index=4&t=1228s
